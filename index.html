@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .floating-button {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 101px;
+      height: 101px;
+      background-color: #FFB987;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      z-index: 1;
+    }
+
+    .icon {
+      width: 50px;
+      height: 50px;
+    }
+    .sub-icon {
+      width: 30px;
+      height: 30px;
+    }
+    .sub-buttons-container {
+      position: fixed;
+      bottom: 150px;
+      right: 58px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sub-button {
+      width: 50px;
+      height: 50px;
+      background-color: #FFB987;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      margin-bottom: 20px;
+    }
+  </style>
+  <title>Floating Button</title>
+</head>
+<body>
+  <button class="floating-button" onclick="toggleSubButtons()">
+    <img class="icon" src="sino.png" alt="Ícone de sino preto">
+  </button>
+
+  <div class="sub-buttons-container" id="subButtonsContainer" style="display: none;">
+    <button class="sub-button">
+      <img class="sub-icon" src="cifrao.png" alt="Ícone de cifrão preto">
+    </button>
+    <button class="sub-button">
+      <img class="sub-icon" src="notificacao.png" alt="Ícone de sino preto">
+    </button>
+  </div>
+
+  <script>
+    function toggleSubButtons() {
+      var subButtonsContainer = document.getElementById("subButtonsContainer");
+      subButtonsContainer.style.display = subButtonsContainer.style.display === "none" ? "flex" : "none";
+    }
+  </script>
+</body>
+</html>
